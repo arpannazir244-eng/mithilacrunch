@@ -16,56 +16,87 @@ body{
   color:#2b2b2b;
 }
 
-/* BRAND */
+/* ===== BRAND HEADER (UPGRADED) ===== */
 .brand-header{
-  background:#ffffff;
-  padding:40px 20px;
+  background:
+    linear-gradient(135deg,#ffefb3,#f4b400,#e09b00);
+  padding:60px 20px;
   text-align:center;
-  box-shadow:0 8px 22px rgba(0,0,0,0.1);
+  box-shadow:
+    0 15px 40px rgba(0,0,0,0.2),
+    inset 0 -8px 20px rgba(255,255,255,0.4);
+  position:relative;
+  overflow:hidden;
 }
+
+.brand-header::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at top left,rgba(255,255,255,0.6),transparent 60%),
+    radial-gradient(circle at bottom right,rgba(0,0,0,0.15),transparent 65%);
+  pointer-events:none;
+}
+
 .brand-name{
   font-family:'Cinzel',serif;
-  font-size:56px;
+  font-size:58px;
   font-weight:900;
   letter-spacing:6px;
   color:#4a250c;
+  text-transform:uppercase;
+  text-shadow:
+    0 4px 0 rgba(255,255,255,0.6),
+    0 10px 20px rgba(0,0,0,0.35);
+  transform:perspective(800px) rotateX(8deg);
+  animation:brandFloat 4s ease-in-out infinite;
 }
+
+@keyframes brandFloat{
+  0%,100%{transform:perspective(800px) rotateX(8deg) translateY(0)}
+  50%{transform:perspective(800px) rotateX(8deg) translateY(-8px)}
+}
+
 .brand-tagline{
-  margin-top:12px;
+  margin-top:14px;
   font-size:13px;
   letter-spacing:4px;
-  color:#666;
+  color:#4a250c;
   text-transform:uppercase;
 }
 
-/* HERO */
+/* ===== HERO ===== */
 .hero{
   max-width:1200px;
-  margin:80px auto;
+  margin:90px auto;
   padding:0 20px;
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:50px;
   align-items:center;
 }
+
 .hero h1{
   font-family:'Cinzel',serif;
   font-size:42px;
   margin-bottom:18px;
 }
+
 .hero p{
   font-size:18px;
   color:#555;
   margin-bottom:28px;
 }
+
 .hero img{
   width:100%;
   border-radius:26px;
-  box-shadow:0 32px 64px rgba(0,0,0,0.2);
-  transform:perspective(1100px) rotateY(-8deg);
+  box-shadow:0 32px 64px rgba(0,0,0,0.25);
+  transform:perspective(1100px) rotateY(-10deg);
 }
 
-/* BUTTON */
+/* ===== BUTTON ===== */
 .btn{
   padding:12px 26px;
   background:#8b4513;
@@ -74,33 +105,44 @@ body{
   border-radius:6px;
   font-weight:500;
   cursor:pointer;
+  transition:.3s;
 }
 .btn:hover{background:#6f350f}
 
-/* PRODUCTS */
+/* ===== PRODUCTS ===== */
 .products{
   max-width:1200px;
-  margin:100px auto;
+  margin:110px auto;
   padding:0 20px;
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:38px;
 }
+
 .card{
   background:#ffffff;
   border-radius:22px;
   padding:24px;
   box-shadow:0 20px 45px rgba(0,0,0,0.15);
+  transition:.4s;
+  transform-style:preserve-3d;
 }
+
+.card:hover{
+  transform:translateY(-14px) rotateX(4deg);
+}
+
 .card img{
   width:100%;
   border-radius:18px;
   margin-bottom:16px;
 }
+
 .card h3{
   font-family:'Cinzel',serif;
   font-size:22px;
 }
+
 .price{
   font-size:20px;
   font-weight:600;
@@ -108,36 +150,40 @@ body{
   color:#b3541e;
 }
 
-/* CART */
+/* ===== CART ===== */
 .cart{
   max-width:800px;
-  margin:120px auto;
+  margin:130px auto;
   background:#fff;
   padding:30px;
   border-radius:18px;
   box-shadow:0 20px 45px rgba(0,0,0,0.15);
 }
+
 .cart h2{
   font-family:'Cinzel',serif;
   margin-bottom:20px;
 }
+
 .cart ul{
   list-style:none;
   margin-bottom:20px;
 }
+
 .cart li{
   display:flex;
   justify-content:space-between;
   margin-bottom:10px;
 }
+
 .total{
   font-weight:600;
   margin-bottom:20px;
 }
 
-/* TRUST */
+/* ===== TRUST ===== */
 .trust{
-  margin:120px 0;
+  margin:130px 0;
   padding:40px 10px;
   background:#fff1c1;
   display:flex;
@@ -147,7 +193,7 @@ body{
   text-transform:uppercase;
 }
 
-/* FOOTER */
+/* ===== FOOTER ===== */
 footer{
   text-align:center;
   padding:36px;
@@ -157,7 +203,7 @@ footer{
 
 @media(max-width:900px){
   .hero{grid-template-columns:1fr}
-  .brand-name{font-size:40px}
+  .brand-name{font-size:42px}
 }
 </style>
 </head>
