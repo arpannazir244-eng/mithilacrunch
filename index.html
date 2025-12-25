@@ -12,64 +12,47 @@
 
 body{
   font-family:'Poppins',sans-serif;
-  background:#fff6d8;
+  background:#fff6d8; /* single background color */
   color:#2b2b2b;
 }
 
-/* ===== BRAND HEADER (UPGRADED) ===== */
+/* ===== BRAND HEADER ===== */
 .brand-header{
-  background:
-    linear-gradient(135deg,#ffefb3,#f4b400,#e09b00);
-  padding:60px 20px;
+  background:#ffffff;
+  padding:48px 20px;
   text-align:center;
-  box-shadow:
-    0 15px 40px rgba(0,0,0,0.2),
-    inset 0 -8px 20px rgba(255,255,255,0.4);
-  position:relative;
-  overflow:hidden;
-}
-
-.brand-header::before{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:
-    radial-gradient(circle at top left,rgba(255,255,255,0.6),transparent 60%),
-    radial-gradient(circle at bottom right,rgba(0,0,0,0.15),transparent 65%);
-  pointer-events:none;
+  box-shadow:0 6px 18px rgba(0,0,0,0.1);
 }
 
 .brand-name{
   font-family:'Cinzel',serif;
-  font-size:58px;
+  font-size:56px;
   font-weight:900;
   letter-spacing:6px;
   color:#4a250c;
   text-transform:uppercase;
-  text-shadow:
-    0 4px 0 rgba(255,255,255,0.6),
-    0 10px 20px rgba(0,0,0,0.35);
-  transform:perspective(800px) rotateX(8deg);
-  animation:brandFloat 4s ease-in-out infinite;
+  display:inline-block;
 }
 
-@keyframes brandFloat{
-  0%,100%{transform:perspective(800px) rotateX(8deg) translateY(0)}
-  50%{transform:perspective(800px) rotateX(8deg) translateY(-8px)}
+.brand-underline{
+  width:80px;
+  height:4px;
+  background:#f4b400;
+  margin:14px auto 10px;
+  border-radius:2px;
 }
 
 .brand-tagline{
-  margin-top:14px;
   font-size:13px;
   letter-spacing:4px;
-  color:#4a250c;
+  color:#666;
   text-transform:uppercase;
 }
 
 /* ===== HERO ===== */
 .hero{
   max-width:1200px;
-  margin:90px auto;
+  margin:80px auto;
   padding:0 20px;
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -92,8 +75,8 @@ body{
 .hero img{
   width:100%;
   border-radius:26px;
-  box-shadow:0 32px 64px rgba(0,0,0,0.25);
-  transform:perspective(1100px) rotateY(-10deg);
+  box-shadow:0 30px 60px rgba(0,0,0,0.25);
+  transform:perspective(1000px) rotateY(-8deg);
 }
 
 /* ===== BUTTON ===== */
@@ -105,7 +88,6 @@ body{
   border-radius:6px;
   font-weight:500;
   cursor:pointer;
-  transition:.3s;
 }
 .btn:hover{background:#6f350f}
 
@@ -124,12 +106,10 @@ body{
   border-radius:22px;
   padding:24px;
   box-shadow:0 20px 45px rgba(0,0,0,0.15);
-  transition:.4s;
-  transform-style:preserve-3d;
+  transition:.35s;
 }
-
 .card:hover{
-  transform:translateY(-14px) rotateX(4deg);
+  transform:translateY(-10px);
 }
 
 .card img{
@@ -154,7 +134,7 @@ body{
 .cart{
   max-width:800px;
   margin:130px auto;
-  background:#fff;
+  background:#ffffff;
   padding:30px;
   border-radius:18px;
   box-shadow:0 20px 45px rgba(0,0,0,0.15);
@@ -212,6 +192,7 @@ footer{
 
 <header class="brand-header">
   <div class="brand-name">MITHILA CRUNCH</div>
+  <div class="brand-underline"></div>
   <div class="brand-tagline">Har Bite Mein Mithila</div>
 </header>
 
