@@ -5,7 +5,8 @@
 <title>MithilaCrunch | Authentic Mithila Sweets</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -16,134 +17,169 @@ body{
   color:#2b2b2b;
 }
 
-/* Header */
-header{
-  padding:22px 40px;
-  font-family:'Playfair Display',serif;
-  font-size:32px;
-  background:#fff;
-  box-shadow:0 4px 10px rgba(0,0,0,0.05);
+/* ===== BRAND HEADER ===== */
+.brand-header{
+  background:#ffffff;
+  padding:30px 20px;
+  text-align:center;
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
 }
 
-/* Hero */
+.brand-name{
+  font-family:'Playfair Display',serif;
+  font-size:44px;
+  letter-spacing:1px;
+  color:#5a2e0f;
+  display:inline-block;
+  position:relative;
+}
+
+.brand-name::after{
+  content:'';
+  display:block;
+  width:60%;
+  height:4px;
+  background:#f4b400;
+  margin:10px auto 0;
+  border-radius:4px;
+}
+
+.brand-tagline{
+  margin-top:8px;
+  font-size:14px;
+  letter-spacing:2px;
+  color:#777;
+  text-transform:uppercase;
+}
+
+/* ===== HERO ===== */
 .hero{
   max-width:1200px;
-  margin:60px auto;
+  margin:70px auto;
   padding:0 20px;
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:40px;
+  gap:50px;
   align-items:center;
 }
 
 .hero h1{
   font-family:'Playfair Display',serif;
-  font-size:44px;
+  font-size:46px;
   margin-bottom:15px;
 }
 
 .hero p{
   font-size:18px;
-  margin-bottom:25px;
   color:#555;
+  margin-bottom:25px;
 }
 
 .hero img{
   width:100%;
-  border-radius:22px;
-  box-shadow:0 25px 50px rgba(0,0,0,0.2);
+  border-radius:24px;
+  box-shadow:0 30px 60px rgba(0,0,0,0.2);
   transform:perspective(1000px) rotateY(-8deg);
 }
 
-/* Button */
+/* ===== BUTTON ===== */
 .btn{
   display:inline-block;
-  padding:14px 30px;
+  padding:14px 32px;
   background:#8b4513;
   color:#fff;
   border-radius:6px;
   text-decoration:none;
   font-weight:500;
+  transition:.3s;
 }
 
-/* Products */
+.btn:hover{
+  background:#6f350f;
+}
+
+/* ===== PRODUCTS ===== */
 .products{
   max-width:1200px;
-  margin:80px auto;
+  margin:90px auto;
   padding:0 20px;
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:30px;
+  gap:35px;
 }
 
 .card{
-  background:#fff;
-  border-radius:18px;
-  padding:20px;
-  box-shadow:0 15px 35px rgba(0,0,0,0.15);
-  transition:.3s;
+  background:#ffffff;
+  border-radius:20px;
+  padding:22px;
+  box-shadow:0 18px 40px rgba(0,0,0,0.15);
+  transition:.35s;
   transform-style:preserve-3d;
 }
 
 .card:hover{
-  transform:translateY(-10px) scale(1.03);
+  transform:translateY(-12px) scale(1.03);
 }
 
 .card img{
   width:100%;
-  border-radius:14px;
+  border-radius:16px;
   margin-bottom:15px;
 }
 
 .card h3{
   font-family:'Playfair Display',serif;
-  margin-bottom:5px;
+  margin-bottom:6px;
 }
 
 .price{
   font-size:20px;
   font-weight:600;
-  margin:8px 0;
+  margin:8px 0 14px;
   color:#b3541e;
 }
 
-/* Trust */
+/* ===== TRUST ===== */
 .trust{
-  margin:90px 0;
-  padding:30px 10px;
+  margin:100px 0;
+  padding:35px 10px;
   background:#fff1c1;
   display:flex;
   justify-content:space-around;
   font-size:15px;
 }
 
-/* Footer */
+/* ===== FOOTER ===== */
 footer{
   text-align:center;
-  padding:30px;
+  padding:35px;
   font-size:13px;
   color:#666;
 }
 
+/* ===== MOBILE ===== */
 @media(max-width:900px){
   .hero{grid-template-columns:1fr}
-  header{text-align:center}
 }
 </style>
 </head>
 
 <body>
 
-<header>MithilaCrunch</header>
+<!-- BRAND -->
+<header class="brand-header">
+  <div class="brand-name">MithilaCrunch</div>
+  <div class="brand-tagline">Har Bite Mein Mithila</div>
+</header>
 
 <!-- HERO -->
 <section class="hero">
   <div>
     <h1>Authentic Mithila Sweets</h1>
-    <p>Traditional homemade sweets from Mithila – fresh, hygienic and full of flavour.</p>
+    <p>Traditional homemade sweets from Mithila — fresh, hygienic and full of authentic flavour.</p>
     <a class="btn" href="#products">Order Now</a>
   </div>
-  <img src="thekua.jpg" alt="Thekua">
+  <img src="thekua.jpg" alt="MithilaCrunch Thekua">
 </section>
 
 <!-- PRODUCTS -->
@@ -153,28 +189,28 @@ footer{
     <img src="thekua.jpg">
     <h3>Thekua</h3>
     <div class="price">₹199 / 250g</div>
-    <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=Order Thekua">Order</a>
+    <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=Order Thekua from MithilaCrunch">Order</a>
   </div>
 
   <div class="card">
     <img src="laddu.jpg">
     <h3>Besan Laddu</h3>
     <div class="price">₹249</div>
-    <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=Order Besan Laddu">Order</a>
+    <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=Order Besan Laddu from MithilaCrunch">Order</a>
   </div>
 
   <div class="card">
     <img src="halwa.jpg">
     <h3>Badam Halwa</h3>
     <div class="price">₹299</div>
-    <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=Order Badam Halwa">Order</a>
+    <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=Order Badam Halwa from MithilaCrunch">Order</a>
   </div>
 
   <div class="card">
     <img src="malpua.jpg">
     <h3>Malpua with Rabri</h3>
     <div class="price">₹299</div>
-    <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=Order Malpua">Order</a>
+    <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=Order Malpua from MithilaCrunch">Order</a>
   </div>
 
 </section>
