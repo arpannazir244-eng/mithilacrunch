@@ -1,150 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>MithilaCrunch – Authentic Mithila Thekua</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>MithilaCrunch – Authentic Thekua</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #fafafa;
-      color: #222;
-    }
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background: linear-gradient(270deg,#ffcf6f,#ff9a3c,#ffd36e);
+  background-size:600% 600%;
+  animation:bgMove 12s ease infinite;
+  color:#222;
+}
 
-    header {
-      padding: 20px 40px;
-      font-family: 'Playfair Display', serif;
-      font-size: 28px;
-      background: #ffffff;
-      border-bottom: 1px solid #eaeaea;
-    }
+@keyframes bgMove{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
 
-    .hero {
-      max-width: 1100px;
-      margin: 60px auto;
-      padding: 0 20px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: center;
-    }
+header{
+  padding:25px 40px;
+  font-size:30px;
+  font-weight:600;
+  color:#4a2c00;
+}
 
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 42px;
-      margin-bottom: 20px;
-    }
+.hero{
+  max-width:1200px;
+  margin:40px auto;
+  padding:30px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
+}
 
-    .hero p {
-      font-size: 18px;
-      line-height: 1.6;
-      margin-bottom: 30px;
-      color: #555;
-    }
+.hero-text{
+  animation:slideLeft 1s ease forwards;
+}
 
-    .btn {
-      display: inline-block;
-      background: #1db954;
-      color: #fff;
-      padding: 14px 28px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 500;
-    }
+@keyframes slideLeft{
+  from{opacity:0;transform:translateX(-60px)}
+  to{opacity:1;transform:translateX(0)}
+}
 
-    .hero img {
-      width: 100%;
-      border-radius: 16px;
-    }
+.hero h1{
+  font-size:44px;
+  margin-bottom:15px;
+}
 
-    .product {
-      max-width: 1100px;
-      margin: 80px auto;
-      padding: 0 20px;
-    }
+.hero p{
+  font-size:18px;
+  margin-bottom:25px;
+}
 
-    .card {
-      background: #ffffff;
-      border-radius: 16px;
-      padding: 30px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
-      align-items: center;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.06);
-    }
+.btn{
+  background:#1db954;
+  color:#fff;
+  padding:14px 30px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:500;
+  box-shadow:0 10px 25px rgba(0,0,0,0.25);
+  transition:transform .3s,box-shadow .3s;
+}
 
-    .price {
-      font-size: 24px;
-      font-weight: 600;
-      margin: 15px 0;
-    }
+.btn:hover{
+  transform:translateY(-4px) scale(1.05);
+  box-shadow:0 20px 40px rgba(0,0,0,0.35);
+}
 
-    .trust {
-      display: flex;
-      gap: 30px;
-      margin-top: 20px;
-      color: #666;
-      font-size: 14px;
-    }
+.hero-img{
+  perspective:1000px;
+}
 
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: #888;
-      font-size: 13px;
-    }
+.hero-img img{
+  width:100%;
+  border-radius:20px;
+  transform:rotateY(-12deg);
+  box-shadow:0 30px 60px rgba(0,0,0,0.35);
+  animation:float 4s ease-in-out infinite;
+}
 
-    @media (max-width: 768px) {
-      .hero, .card {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+@keyframes float{
+  0%,100%{transform:rotateY(-12deg) translateY(0)}
+  50%{transform:rotateY(-12deg) translateY(-12px)}
+}
+
+.product{
+  max-width:900px;
+  margin:80px auto;
+  background:rgba(255,255,255,0.9);
+  border-radius:25px;
+  padding:35px;
+  box-shadow:0 25px 60px rgba(0,0,0,0.25);
+  transform-style:preserve-3d;
+}
+
+.product img{
+  width:100%;
+  border-radius:20px;
+  margin-bottom:20px;
+}
+
+.price{
+  font-size:26px;
+  font-weight:600;
+  color:#b34700;
+  margin:15px 0;
+}
+
+.trust{
+  display:flex;
+  justify-content:space-between;
+  margin-top:25px;
+  font-size:14px;
+  color:#444;
+}
+
+footer{
+  text-align:center;
+  padding:30px;
+  font-size:13px;
+  color:#4a2c00;
+}
+
+@media(max-width:768px){
+  .hero{grid-template-columns:1fr}
+  header{text-align:center}
+}
+</style>
 </head>
+
 <body>
 
-<header>
-  MithilaCrunch
-</header>
+<header>MithilaCrunch</header>
 
 <section class="hero">
-  <div>
+  <div class="hero-text">
     <h1>Authentic Mithila Thekua</h1>
-    <p>
-      Traditional homemade thekua prepared using authentic Mithila recipes.
-      No preservatives. Hygienic preparation. Delivered across India.
-    </p>
+    <p>Traditional taste with modern presentation. Hygienic, homemade and delivered across India.</p>
     <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=I want to order MithilaCrunch Thekua">
       Order on WhatsApp
     </a>
   </div>
 
-  <img src="thekua.jpeg" alt="MithilaCrunch Thekua">
+  <div class="hero-img">
+    <img src="thekua.jpeg" alt="MithilaCrunch Thekua">
+  </div>
 </section>
 
 <section class="product">
-  <div class="card">
-    <img src="thekua.jpeg" alt="Thekua">
+  <img src="thekua.jpeg" alt="Thekua">
+  <h2>MithilaCrunch Thekua</h2>
+  <div class="price">₹199 (250g)</div>
+  <p>Crispy, golden, authentic Mithila-style thekua made with traditional recipe.</p>
 
-    <div>
-      <h2>MithilaCrunch Thekua</h2>
-      <div class="price">₹199 (250g)</div>
-      <p>
-        Crispy, authentic Mithila-style thekua made with traditional ingredients.
-      </p>
-
-      <div class="trust">
-        <div>✔ Hygienic</div>
-        <div>✔ No Preservatives</div>
-        <div>✔ All India Delivery</div>
-      </div>
-    </div>
+  <div class="trust">
+    <div>✔ Hygienic</div>
+    <div>✔ No Preservatives</div>
+    <div>✔ All India Delivery</div>
   </div>
 </section>
 
