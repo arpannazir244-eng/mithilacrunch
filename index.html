@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>MithilaCrunch | Authentic Thekua</title>
+<title>MithilaCrunch | Authentic Mithila Sweets</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Food-style fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
@@ -13,17 +12,17 @@
 
 body{
   font-family:'Poppins',sans-serif;
-  background:#fffaf2;
-  color:#2d2d2d;
+  background:#fff6d8;
+  color:#2b2b2b;
 }
 
 /* Header */
 header{
   padding:22px 40px;
   font-family:'Playfair Display',serif;
-  font-size:30px;
-  background:#ffffff;
-  border-bottom:1px solid #eee;
+  font-size:32px;
+  background:#fff;
+  box-shadow:0 4px 10px rgba(0,0,0,0.05);
 }
 
 /* Hero */
@@ -33,7 +32,7 @@ header{
   padding:0 20px;
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:50px;
+  gap:40px;
   align-items:center;
 }
 
@@ -45,14 +44,15 @@ header{
 
 .hero p{
   font-size:18px;
-  color:#555;
   margin-bottom:25px;
+  color:#555;
 }
 
 .hero img{
   width:100%;
-  border-radius:20px;
-  box-shadow:0 20px 40px rgba(0,0,0,0.15);
+  border-radius:22px;
+  box-shadow:0 25px 50px rgba(0,0,0,0.2);
+  transform:perspective(1000px) rotateY(-8deg);
 }
 
 /* Button */
@@ -64,67 +64,57 @@ header{
   border-radius:6px;
   text-decoration:none;
   font-weight:500;
-  transition:.3s;
 }
 
-.btn:hover{
-  background:#6f350f;
-}
-
-/* Product Section */
-.product{
-  max-width:1000px;
+/* Products */
+.products{
+  max-width:1200px;
   margin:80px auto;
-  padding:40px 20px;
+  padding:0 20px;
   display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:40px;
-  align-items:center;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
 }
 
-.product img{
-  width:100%;
-  border-radius:18px;
-}
-
-.price{
-  font-size:26px;
-  font-weight:600;
-  margin:15px 0;
-  color:#b3541e;
-}
-
-/* Order Box */
-.order-box{
+.card{
   background:#fff;
-  padding:30px;
-  border-radius:16px;
-  box-shadow:0 15px 35px rgba(0,0,0,0.1);
+  border-radius:18px;
+  padding:20px;
+  box-shadow:0 15px 35px rgba(0,0,0,0.15);
+  transition:.3s;
+  transform-style:preserve-3d;
 }
 
-.order-box h3{
-  font-family:'Playfair Display',serif;
-  font-size:26px;
+.card:hover{
+  transform:translateY(-10px) scale(1.03);
+}
+
+.card img{
+  width:100%;
+  border-radius:14px;
   margin-bottom:15px;
 }
 
-.order-box ul{
-  margin:15px 0 25px;
-  padding-left:18px;
-  color:#555;
+.card h3{
+  font-family:'Playfair Display',serif;
+  margin-bottom:5px;
 }
 
-.order-box li{
-  margin-bottom:8px;
+.price{
+  font-size:20px;
+  font-weight:600;
+  margin:8px 0;
+  color:#b3541e;
 }
 
 /* Trust */
 .trust{
+  margin:90px 0;
+  padding:30px 10px;
+  background:#fff1c1;
   display:flex;
   justify-content:space-around;
-  background:#fff3dd;
-  padding:30px 10px;
-  font-size:14px;
+  font-size:15px;
 }
 
 /* Footer */
@@ -132,12 +122,11 @@ footer{
   text-align:center;
   padding:30px;
   font-size:13px;
-  color:#777;
+  color:#666;
 }
 
-/* Mobile */
 @media(max-width:900px){
-  .hero,.product{grid-template-columns:1fr}
+  .hero{grid-template-columns:1fr}
   header{text-align:center}
 }
 </style>
@@ -150,44 +139,55 @@ footer{
 <!-- HERO -->
 <section class="hero">
   <div>
-    <h1>Authentic Mithila Thekua</h1>
-    <p>Golden, crispy thekua made with traditional Mithila recipe. Homemade, hygienic and full of flavour.</p>
-    <a class="btn" href="#order">Order Now</a>
+    <h1>Authentic Mithila Sweets</h1>
+    <p>Traditional homemade sweets from Mithila – fresh, hygienic and full of flavour.</p>
+    <a class="btn" href="#products">Order Now</a>
   </div>
-
-  <img src="thekua.jpeg" alt="MithilaCrunch Thekua">
+  <img src="thekua.jpg" alt="Thekua">
 </section>
 
-<!-- PRODUCT + ORDER -->
-<section class="product" id="order">
-  <img src="thekua.jpeg" alt="Thekua close-up">
+<!-- PRODUCTS -->
+<section class="products" id="products">
 
-  <div class="order-box">
-    <h3>MithilaCrunch Thekua</h3>
+  <div class="card">
+    <img src="thekua.jpg">
+    <h3>Thekua</h3>
     <div class="price">₹199 / 250g</div>
-
-    <ul>
-      <li>✔ Traditional Mithila taste</li>
-      <li>✔ No preservatives</li>
-      <li>✔ Hygienically prepared</li>
-      <li>✔ All India delivery</li>
-    </ul>
-
-    <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=I want to order MithilaCrunch Thekua">
-      Order on WhatsApp
-    </a>
+    <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=Order Thekua">Order</a>
   </div>
+
+  <div class="card">
+    <img src="laddu.jpg">
+    <h3>Besan Laddu</h3>
+    <div class="price">₹249</div>
+    <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=Order Besan Laddu">Order</a>
+  </div>
+
+  <div class="card">
+    <img src="halwa.jpg">
+    <h3>Badam Halwa</h3>
+    <div class="price">₹299</div>
+    <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=Order Badam Halwa">Order</a>
+  </div>
+
+  <div class="card">
+    <img src="malpua.jpg">
+    <h3>Malpua with Rabri</h3>
+    <div class="price">₹299</div>
+    <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=Order Malpua">Order</a>
+  </div>
+
 </section>
 
 <!-- TRUST -->
 <section class="trust">
   <div>🍪 Authentic Recipe</div>
-  <div>🧼 Hygienic Cooking</div>
-  <div>🚚 Fast Delivery</div>
+  <div>🧼 Hygienic Preparation</div>
+  <div>🚚 All India Delivery</div>
 </section>
 
 <footer>
-  © 2025 MithilaCrunch | Har Bite Mein Mithila
+  © 2025 MithilaCrunch
 </footer>
 
 </body>
