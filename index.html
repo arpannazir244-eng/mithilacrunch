@@ -121,9 +121,13 @@ body{
 
 .card img{
   width:100%;
+  height:220px;              /* FIXED HEIGHT */
+  object-fit:cover;          /* IMAGE CROP, NO STRETCH */
   border-radius:18px;
   margin-bottom:16px;
+  background:#eee;
 }
+
 
 .card h3{
   font-family:'Cinzel',serif;
@@ -287,3 +291,4 @@ function renderCart(){
 
 </body>
 </html>
+
