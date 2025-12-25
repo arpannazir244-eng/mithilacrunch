@@ -2,102 +2,108 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>MithilaCrunch – Authentic Thekua</title>
+  <title>MithilaCrunch – Authentic Mithila Thekua</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #fffdf8;
-      color: #333;
+      font-family: 'Inter', sans-serif;
+      background: #fafafa;
+      color: #222;
     }
 
     header {
-      background: #6b3e1e;
-      color: #fff;
-      padding: 15px 20px;
-      font-size: 22px;
-      font-weight: bold;
+      padding: 20px 40px;
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      background: #ffffff;
+      border-bottom: 1px solid #eaeaea;
     }
 
     .hero {
-      display: flex;
-      flex-wrap: wrap;
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
       align-items: center;
-      padding: 40px 20px;
-      background: #fff4cc;
     }
 
-    .hero-text {
-      flex: 1;
-      min-width: 260px;
-    }
-
-    .hero-text h1 {
-      font-size: 32px;
-      margin-bottom: 10px;
-    }
-
-    .hero-text p {
-      font-size: 18px;
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
       margin-bottom: 20px;
     }
 
-    .hero img {
-      flex: 1;
-      max-width: 320px;
-      width: 100%;
-      border-radius: 12px;
-    }
-
-    .product {
-      max-width: 350px;
-      margin: 40px auto;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      padding: 20px;
-      text-align: center;
-    }
-
-    .product img {
-      width: 100%;
-      border-radius: 10px;
-    }
-
-    .price {
-      font-size: 22px;
-      color: #c45500;
-      margin: 15px 0;
-      font-weight: bold;
+    .hero p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      color: #555;
     }
 
     .btn {
       display: inline-block;
-      background: #25d366;
+      background: #1db954;
       color: #fff;
-      padding: 12px 22px;
-      text-decoration: none;
+      padding: 14px 28px;
       border-radius: 6px;
-      font-size: 16px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .hero img {
+      width: 100%;
+      border-radius: 16px;
+    }
+
+    .product {
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 30px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: center;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+    }
+
+    .price {
+      font-size: 24px;
+      font-weight: 600;
+      margin: 15px 0;
     }
 
     .trust {
       display: flex;
-      justify-content: space-around;
-      background: #f8f8f8;
-      padding: 25px 10px;
-      text-align: center;
+      gap: 30px;
+      margin-top: 20px;
+      color: #666;
       font-size: 14px;
     }
 
     footer {
-      background: #6b3e1e;
-      color: #fff;
       text-align: center;
-      padding: 12px;
+      padding: 30px;
+      color: #888;
       font-size: 13px;
+    }
+
+    @media (max-width: 768px) {
+      .hero, .card {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -108,27 +114,39 @@
 </header>
 
 <section class="hero">
-  <div class="hero-text">
+  <div>
     <h1>Authentic Mithila Thekua</h1>
-    <p>Homemade • Hygienic • No Preservatives</p>
+    <p>
+      Traditional homemade thekua prepared using authentic Mithila recipes.
+      No preservatives. Hygienic preparation. Delivered across India.
+    </p>
+    <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=I want to order MithilaCrunch Thekua">
+      Order on WhatsApp
+    </a>
   </div>
+
   <img src="thekua.jpeg" alt="MithilaCrunch Thekua">
 </section>
 
-<div class="product">
-  <img src="thekua.jpeg" alt="Thekua">
-  <h2>MithilaCrunch Thekua</h2>
-  <div class="price">₹199 (250g)</div>
-  <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=I want to order MithilaCrunch Thekua">
-    Order on WhatsApp
-  </a>
-</div>
+<section class="product">
+  <div class="card">
+    <img src="thekua.jpeg" alt="Thekua">
 
-<div class="trust">
-  <div>✅ Hygienic</div>
-  <div>✅ Traditional Recipe</div>
-  <div>✅ All India Delivery</div>
-</div>
+    <div>
+      <h2>MithilaCrunch Thekua</h2>
+      <div class="price">₹199 (250g)</div>
+      <p>
+        Crispy, authentic Mithila-style thekua made with traditional ingredients.
+      </p>
+
+      <div class="trust">
+        <div>✔ Hygienic</div>
+        <div>✔ No Preservatives</div>
+        <div>✔ All India Delivery</div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <footer>
   © 2025 MithilaCrunch
