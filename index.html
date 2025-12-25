@@ -2,71 +2,102 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>MithilaCrunch | Authentic Thekua</title>
+  <title>MithilaCrunch – Authentic Thekua</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #fff8f0;
+      background: #fffdf8;
+      color: #333;
     }
+
     header {
-      background: #f4b400;
-      padding: 15px;
-      text-align: center;
-      color: #4b2e05;
-      font-size: 26px;
+      background: #6b3e1e;
+      color: #fff;
+      padding: 15px 20px;
+      font-size: 22px;
       font-weight: bold;
     }
+
     .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
       padding: 40px 20px;
-      text-align: center;
+      background: #fff4cc;
     }
-    .hero h1 {
+
+    .hero-text {
+      flex: 1;
+      min-width: 260px;
+    }
+
+    .hero-text h1 {
       font-size: 32px;
       margin-bottom: 10px;
     }
-    .hero p {
+
+    .hero-text p {
       font-size: 18px;
-      color: #555;
+      margin-bottom: 20px;
     }
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 30px;
+
+    .hero img {
+      flex: 1;
+      max-width: 320px;
+      width: 100%;
+      border-radius: 12px;
     }
-    .card {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+    .product {
+      max-width: 350px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
       padding: 20px;
       text-align: center;
     }
-    .card img {
+
+    .product img {
       width: 100%;
       border-radius: 10px;
     }
+
     .price {
       font-size: 22px;
-      color: #e65100;
-      margin: 10px 0;
+      color: #c45500;
+      margin: 15px 0;
+      font-weight: bold;
     }
+
     .btn {
       display: inline-block;
       background: #25d366;
-      color: white;
-      padding: 12px 20px;
+      color: #fff;
+      padding: 12px 22px;
       text-decoration: none;
       border-radius: 6px;
       font-size: 16px;
     }
-    footer {
-      background: #333;
-      color: white;
+
+    .trust {
+      display: flex;
+      justify-content: space-around;
+      background: #f8f8f8;
+      padding: 25px 10px;
       text-align: center;
-      padding: 15px;
       font-size: 14px;
+    }
+
+    footer {
+      background: #6b3e1e;
+      color: #fff;
+      text-align: center;
+      padding: 12px;
+      font-size: 13px;
     }
   </style>
 </head>
@@ -77,23 +108,30 @@
 </header>
 
 <section class="hero">
-  <h1>Authentic Mithila Thekua</h1>
-  <p>Traditional Taste | Hygienic | No Preservatives</p>
+  <div class="hero-text">
+    <h1>Authentic Mithila Thekua</h1>
+    <p>Homemade • Hygienic • No Preservatives</p>
+  </div>
+  <img src="thekua.jpeg" alt="MithilaCrunch Thekua">
 </section>
 
-<section class="products">
-  <div class="card">
-    <img src="thekua.jpg" alt="MithilaCrunch Thekua">
-    <h2>MithilaCrunch Thekua</h2>
-    <p class="price">₹199 (250g)</p>
-    <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=I want to order MithilaCrunch Thekua">
-      Order on WhatsApp
-    </a>
-  </div>
-</section>
+<div class="product">
+  <img src="thekua.jpeg" alt="Thekua">
+  <h2>MithilaCrunch Thekua</h2>
+  <div class="price">₹199 (250g)</div>
+  <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=I want to order MithilaCrunch Thekua">
+    Order on WhatsApp
+  </a>
+</div>
+
+<div class="trust">
+  <div>✅ Hygienic</div>
+  <div>✅ Traditional Recipe</div>
+  <div>✅ All India Delivery</div>
+</div>
 
 <footer>
-  © 2025 MithilaCrunch | Har Bite Mein Mithila
+  © 2025 MithilaCrunch
 </footer>
 
 </body>
