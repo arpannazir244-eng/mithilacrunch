@@ -5,8 +5,7 @@
 <title>Mithila Crunch | Authentic Mithila Sweets</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@800;900&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -17,44 +16,29 @@ body{
   color:#2b2b2b;
 }
 
-/* ===== BRAND HEADER ===== */
+/* BRAND */
 .brand-header{
   background:#ffffff;
-  padding:38px 20px;
+  padding:40px 20px;
   text-align:center;
   box-shadow:0 8px 22px rgba(0,0,0,0.1);
 }
-
 .brand-name{
   font-family:'Cinzel',serif;
-  font-size:54px;
+  font-size:56px;
   font-weight:900;
-  letter-spacing:2px;
+  letter-spacing:6px;
   color:#4a250c;
-  text-transform:uppercase;
-  display:inline-block;
-  position:relative;
 }
-
-.brand-name::after{
-  content:'';
-  display:block;
-  width:72%;
-  height:5px;
-  background:linear-gradient(90deg,#f4b400,#d98c00);
-  margin:14px auto 0;
-  border-radius:6px;
-}
-
 .brand-tagline{
   margin-top:12px;
   font-size:13px;
-  letter-spacing:3px;
+  letter-spacing:4px;
   color:#666;
   text-transform:uppercase;
 }
 
-/* ===== HERO ===== */
+/* HERO */
 .hero{
   max-width:1200px;
   margin:80px auto;
@@ -64,19 +48,16 @@ body{
   gap:50px;
   align-items:center;
 }
-
 .hero h1{
   font-family:'Cinzel',serif;
-  font-size:46px;
+  font-size:42px;
   margin-bottom:18px;
 }
-
 .hero p{
   font-size:18px;
   color:#555;
   margin-bottom:28px;
 }
-
 .hero img{
   width:100%;
   border-radius:26px;
@@ -84,23 +65,19 @@ body{
   transform:perspective(1100px) rotateY(-8deg);
 }
 
-/* ===== BUTTON ===== */
+/* BUTTON */
 .btn{
-  display:inline-block;
-  padding:15px 34px;
+  padding:12px 26px;
   background:#8b4513;
-  color:#ffffff;
+  color:#fff;
+  border:none;
   border-radius:6px;
-  text-decoration:none;
   font-weight:500;
-  transition:.3s;
+  cursor:pointer;
 }
+.btn:hover{background:#6f350f}
 
-.btn:hover{
-  background:#6f350f;
-}
-
-/* ===== PRODUCTS ===== */
+/* PRODUCTS */
 .products{
   max-width:1200px;
   margin:100px auto;
@@ -109,41 +86,58 @@ body{
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:38px;
 }
-
 .card{
   background:#ffffff;
   border-radius:22px;
   padding:24px;
   box-shadow:0 20px 45px rgba(0,0,0,0.15);
-  transition:.35s;
 }
-
-.card:hover{
-  transform:translateY(-12px);
-}
-
 .card img{
   width:100%;
   border-radius:18px;
   margin-bottom:16px;
 }
-
 .card h3{
   font-family:'Cinzel',serif;
   font-size:22px;
-  margin-bottom:6px;
 }
-
 .price{
   font-size:20px;
   font-weight:600;
-  margin:10px 0 16px;
+  margin:10px 0 14px;
   color:#b3541e;
 }
 
-/* ===== TRUST STRIP ===== */
+/* CART */
+.cart{
+  max-width:800px;
+  margin:120px auto;
+  background:#fff;
+  padding:30px;
+  border-radius:18px;
+  box-shadow:0 20px 45px rgba(0,0,0,0.15);
+}
+.cart h2{
+  font-family:'Cinzel',serif;
+  margin-bottom:20px;
+}
+.cart ul{
+  list-style:none;
+  margin-bottom:20px;
+}
+.cart li{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:10px;
+}
+.total{
+  font-weight:600;
+  margin-bottom:20px;
+}
+
+/* TRUST */
 .trust{
-  margin:110px 0;
+  margin:120px 0;
   padding:40px 10px;
   background:#fff1c1;
   display:flex;
@@ -151,10 +145,9 @@ body{
   font-size:14px;
   letter-spacing:1px;
   text-transform:uppercase;
-  color:#444;
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 footer{
   text-align:center;
   padding:36px;
@@ -162,71 +155,67 @@ footer{
   color:#666;
 }
 
-/* ===== MOBILE ===== */
 @media(max-width:900px){
   .hero{grid-template-columns:1fr}
-  .hero h1{font-size:38px}
-  .brand-name{font-size:42px}
+  .brand-name{font-size:40px}
 }
 </style>
 </head>
 
 <body>
 
-<!-- BRAND -->
 <header class="brand-header">
-  <div class="brand-name">MithilaCrunch</div>
+  <div class="brand-name">MITHILA CRUNCH</div>
   <div class="brand-tagline">Har Bite Mein Mithila</div>
 </header>
 
-<!-- HERO -->
 <section class="hero">
   <div>
     <h1>Authentic Mithila Sweets</h1>
-    <p>
-      Traditional homemade sweets from Mithila, prepared with care,
-      hygiene and authentic recipes passed down generations.
-    </p>
-    <a class="btn" href="#products">Order Now</a>
+    <p>Traditional homemade sweets prepared with authentic Mithila recipes.</p>
   </div>
-
-  <img src="thekua.jpg" alt="MithilaCrunch Thekua">
+  <img src="thekua.jpg">
 </section>
 
-<!-- PRODUCTS -->
-<section class="products" id="products">
+<section class="products">
 
   <div class="card">
     <img src="thekua.jpg">
     <h3>Thekua</h3>
-    <div class="price">₹199 / 250g</div>
-    <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=Order Thekua from MithilaCrunch">Order</a>
+    <div class="price">₹199</div>
+    <button class="btn" onclick="addToCart('Thekua',199)">Add to Cart</button>
   </div>
 
   <div class="card">
     <img src="laddu.jpg">
     <h3>Besan Laddu</h3>
     <div class="price">₹249</div>
-    <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=Order Besan Laddu from MithilaCrunch">Order</a>
+    <button class="btn" onclick="addToCart('Besan Laddu',249)">Add to Cart</button>
   </div>
 
   <div class="card">
     <img src="halwa.jpg">
     <h3>Badam Halwa</h3>
     <div class="price">₹299</div>
-    <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=Order Badam Halwa from MithilaCrunch">Order</a>
+    <button class="btn" onclick="addToCart('Badam Halwa',299)">Add to Cart</button>
   </div>
 
   <div class="card">
     <img src="malpua.jpg">
     <h3>Malpua with Rabri</h3>
     <div class="price">₹299</div>
-    <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=Order Malpua from MithilaCrunch">Order</a>
+    <button class="btn" onclick="addToCart('Malpua with Rabri',299)">Add to Cart</button>
   </div>
 
 </section>
 
-<!-- TRUST -->
+<section class="cart">
+  <h2>Your Cart</h2>
+  <ul id="cartItems"></ul>
+  <div class="total" id="totalPrice">Total: ₹0</div>
+  <a id="whatsappOrder" class="btn" target="_blank">Order via WhatsApp</a>
+</section>
+
 <section class="trust">
   <div>Authentic Recipe</div>
   <div>Hygienic Preparation</div>
@@ -234,9 +223,33 @@ footer{
 </section>
 
 <footer>
-  © 2025 MithilaCrunch
+  © 2025 Mithila Crunch
 </footer>
+
+<script>
+let cart=[];
+function addToCart(name,price){
+  cart.push({name,price});
+  renderCart();
+}
+function renderCart(){
+  let list=document.getElementById('cartItems');
+  let total=0;
+  list.innerHTML='';
+  cart.forEach(item=>{
+    total+=item.price;
+    let li=document.createElement('li');
+    li.innerHTML=`${item.name} <span>₹${item.price}</span>`;
+    list.appendChild(li);
+  });
+  document.getElementById('totalPrice').innerText='Total: ₹'+total;
+  let msg='Order from Mithila Crunch:%0A';
+  cart.forEach(i=>msg+=`${i.name} - ₹${i.price}%0A`);
+  msg+=`Total: ₹${total}`;
+  document.getElementById('whatsappOrder').href=
+    'https://wa.me/91XXXXXXXXXX?text='+msg;
+}
+</script>
 
 </body>
 </html>
-
