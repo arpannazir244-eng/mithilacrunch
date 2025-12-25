@@ -20,14 +20,14 @@ body{
 /* ===== BRAND HEADER ===== */
 .brand-header{
   background:#ffffff;
-  padding:30px 20px;
+  padding:34px 20px;
   text-align:center;
   box-shadow:0 6px 18px rgba(0,0,0,0.08);
 }
 
 .brand-name{
   font-family:'Playfair Display',serif;
-  font-size:44px;
+  font-size:46px;
   letter-spacing:1px;
   color:#5a2e0f;
   display:inline-block;
@@ -37,17 +37,17 @@ body{
 .brand-name::after{
   content:'';
   display:block;
-  width:60%;
+  width:70%;
   height:4px;
   background:#f4b400;
-  margin:10px auto 0;
+  margin:12px auto 0;
   border-radius:4px;
 }
 
 .brand-tagline{
-  margin-top:8px;
+  margin-top:10px;
   font-size:14px;
-  letter-spacing:2px;
+  letter-spacing:3px;
   color:#777;
   text-transform:uppercase;
 }
@@ -55,7 +55,7 @@ body{
 /* ===== HERO ===== */
 .hero{
   max-width:1200px;
-  margin:70px auto;
+  margin:80px auto;
   padding:0 20px;
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -65,29 +65,29 @@ body{
 
 .hero h1{
   font-family:'Playfair Display',serif;
-  font-size:46px;
-  margin-bottom:15px;
+  font-size:48px;
+  margin-bottom:18px;
 }
 
 .hero p{
   font-size:18px;
   color:#555;
-  margin-bottom:25px;
+  margin-bottom:28px;
 }
 
 .hero img{
   width:100%;
-  border-radius:24px;
-  box-shadow:0 30px 60px rgba(0,0,0,0.2);
-  transform:perspective(1000px) rotateY(-8deg);
+  border-radius:26px;
+  box-shadow:0 32px 64px rgba(0,0,0,0.2);
+  transform:perspective(1100px) rotateY(-8deg);
 }
 
 /* ===== BUTTON ===== */
 .btn{
   display:inline-block;
-  padding:14px 32px;
+  padding:15px 34px;
   background:#8b4513;
-  color:#fff;
+  color:#ffffff;
   border-radius:6px;
   text-decoration:none;
   font-weight:500;
@@ -101,58 +101,61 @@ body{
 /* ===== PRODUCTS ===== */
 .products{
   max-width:1200px;
-  margin:90px auto;
+  margin:100px auto;
   padding:0 20px;
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:35px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:38px;
 }
 
 .card{
   background:#ffffff;
-  border-radius:20px;
-  padding:22px;
-  box-shadow:0 18px 40px rgba(0,0,0,0.15);
+  border-radius:22px;
+  padding:24px;
+  box-shadow:0 20px 45px rgba(0,0,0,0.15);
   transition:.35s;
-  transform-style:preserve-3d;
 }
 
 .card:hover{
-  transform:translateY(-12px) scale(1.03);
+  transform:translateY(-12px);
 }
 
 .card img{
   width:100%;
-  border-radius:16px;
-  margin-bottom:15px;
+  border-radius:18px;
+  margin-bottom:16px;
 }
 
 .card h3{
   font-family:'Playfair Display',serif;
+  font-size:22px;
   margin-bottom:6px;
 }
 
 .price{
   font-size:20px;
   font-weight:600;
-  margin:8px 0 14px;
+  margin:10px 0 16px;
   color:#b3541e;
 }
 
-/* ===== TRUST ===== */
+/* ===== TRUST STRIP ===== */
 .trust{
-  margin:100px 0;
-  padding:35px 10px;
+  margin:110px 0;
+  padding:40px 10px;
   background:#fff1c1;
   display:flex;
   justify-content:space-around;
-  font-size:15px;
+  font-size:14px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  color:#444;
 }
 
 /* ===== FOOTER ===== */
 footer{
   text-align:center;
-  padding:35px;
+  padding:36px;
   font-size:13px;
   color:#666;
 }
@@ -160,6 +163,7 @@ footer{
 /* ===== MOBILE ===== */
 @media(max-width:900px){
   .hero{grid-template-columns:1fr}
+  .hero h1{font-size:40px}
 }
 </style>
 </head>
@@ -176,9 +180,13 @@ footer{
 <section class="hero">
   <div>
     <h1>Authentic Mithila Sweets</h1>
-    <p>Traditional homemade sweets from Mithila — fresh, hygienic and full of authentic flavour.</p>
+    <p>
+      Traditional homemade sweets from Mithila, prepared with care,
+      hygiene and authentic recipes passed down generations.
+    </p>
     <a class="btn" href="#products">Order Now</a>
   </div>
+
   <img src="thekua.jpg" alt="MithilaCrunch Thekua">
 </section>
 
@@ -217,9 +225,9 @@ footer{
 
 <!-- TRUST -->
 <section class="trust">
-  <div>🍪 Authentic Recipe</div>
-  <div>🧼 Hygienic Preparation</div>
-  <div>🚚 All India Delivery</div>
+  <div>Authentic Recipe</div>
+  <div>Hygienic Preparation</div>
+  <div>All India Delivery</div>
 </section>
 
 <footer>
