@@ -5,290 +5,201 @@
 <title>Mithila Crunch | Authentic Mithila Sweets</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@800;900&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+*{margin:0;padding:0;box-sizing:border-box}
 
 body{
-  font-family:'Poppins',sans-serif;
-  background:#f7e3a1;
-  color:#2b2b2b;
+  font-family:'Inter',sans-serif;
+  background:#fbf4dc;
+  color:#2a2a2a;
 }
 
 /* ===== HEADER ===== */
-.brand-header{
-  background:#f1c65a;
-  padding:60px 20px;
-  text-align:center;
-  box-shadow:0 25px 50px rgba(0,0,0,0.25);
-  perspective:1000px;
+header{
+  background:#ffffff;
+  padding:28px 60px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 4px 14px rgba(0,0,0,0.08);
 }
 
-.brand-name{
-  font-family:'Cinzel',serif;
-  font-size:58px;
-  font-weight:900;
-  letter-spacing:6px;
-  color:#4a250c;
-  text-transform:uppercase;
-  animation:brandFloat 4s ease-in-out infinite;
-  text-shadow:
-    0 6px 0 rgba(255,255,255,0.4),
-    0 18px 35px rgba(0,0,0,0.45);
-}
-
-@keyframes brandFloat{
-  0%,100%{transform:rotateX(8deg) translateY(0)}
-  50%{transform:rotateX(8deg) translateY(-10px)}
-}
-
-.brand-underline{
-  width:80px;
-  height:4px;
-  background:#8b4513;
-  margin:18px auto 12px;
-  border-radius:2px;
-}
-
-.brand-tagline{
-  font-size:13px;
-  letter-spacing:4px;
+.brand{
+  font-family:'Playfair Display',serif;
+  font-size:30px;
+  font-weight:700;
   color:#5a2e0f;
-  text-transform:uppercase;
+}
+
+nav a{
+  margin-left:30px;
+  text-decoration:none;
+  color:#444;
+  font-size:14px;
 }
 
 /* ===== HERO ===== */
 .hero{
   max-width:1200px;
-  margin:90px auto;
+  margin:80px auto;
   padding:0 20px;
   display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:50px;
+  grid-template-columns:1.2fr 1fr;
+  gap:60px;
   align-items:center;
 }
 
 .hero h1{
-  font-family:'Cinzel',serif;
-  font-size:42px;
+  font-family:'Playfair Display',serif;
+  font-size:48px;
   margin-bottom:18px;
 }
 
 .hero p{
   font-size:18px;
   color:#555;
-  margin-bottom:28px;
+  margin-bottom:30px;
 }
 
-.hero img{
-  width:100%;
-  border-radius:26px;
-  box-shadow:0 30px 60px rgba(0,0,0,0.25);
-  transform:perspective(1000px) rotateY(-8deg);
-}
-
-/* ===== BUTTON ===== */
 .btn{
-  padding:12px 26px;
+  padding:14px 34px;
   background:#8b4513;
   color:#fff;
-  border:none;
-  border-radius:6px;
-  font-weight:500;
-  cursor:pointer;
-}
-.btn:hover{background:#6f350f}
-
-/* ===== PRODUCTS ===== */
-.products{
-  max-width:1200px;
-  margin:110px auto;
-  padding:0 20px;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:38px;
-}
-
-.card{
-  background:#ffffff;
-  border-radius:22px;
-  padding:24px;
-  box-shadow:0 20px 45px rgba(0,0,0,0.15);
-  transition:.35s;
-}
-.card:hover{transform:translateY(-10px)}
-
-.card img{
-  width:100%;
-  height:220px;              /* FIXED HEIGHT */
-  object-fit:cover;          /* IMAGE CROP, NO STRETCH */
-  border-radius:18px;
-  margin-bottom:16px;
-  background:#eee;
-}
-
-
-.card h3{
-  font-family:'Cinzel',serif;
-  font-size:22px;
-}
-
-.price{
-  font-size:20px;
-  font-weight:600;
-  margin:10px 0 14px;
-  color:#b3541e;
-}
-
-/* ===== CART ===== */
-.cart{
-  max-width:800px;
-  margin:130px auto;
-  background:#ffffff;
-  padding:30px;
-  border-radius:18px;
-  box-shadow:0 20px 45px rgba(0,0,0,0.15);
-}
-
-.cart h2{
-  font-family:'Cinzel',serif;
-  margin-bottom:20px;
-}
-
-.cart ul{
-  list-style:none;
-  margin-bottom:20px;
-}
-
-.cart li{
-  display:flex;
-  justify-content:space-between;
-  margin-bottom:10px;
-}
-
-.total{
-  font-weight:600;
-  margin-bottom:20px;
+  text-decoration:none;
+  border-radius:4px;
+  font-size:15px;
 }
 
 /* ===== TRUST ===== */
 .trust{
-  margin:130px 0;
-  padding:40px 10px;
-  background:#f3d98c;
+  max-width:1200px;
+  margin:80px auto;
+  padding:40px;
+  background:#ffffff;
+  border-radius:12px;
   display:flex;
   justify-content:space-around;
   font-size:14px;
-  letter-spacing:1px;
-  text-transform:uppercase;
+}
+
+/* ===== PRODUCTS ===== */
+.products{
+  max-width:1200px;
+  margin:100px auto;
+  padding:0 20px;
+}
+
+.products h2{
+  font-family:'Playfair Display',serif;
+  font-size:34px;
+  margin-bottom:40px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:40px;
+}
+
+.card{
+  background:#ffffff;
+  padding:22px;
+  border-radius:14px;
+}
+
+.card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:12px;
+  margin-bottom:16px;
+}
+
+.card h3{
+  font-family:'Playfair Display',serif;
+  font-size:22px;
+}
+
+.price{
+  margin:10px 0 16px;
+  font-weight:500;
 }
 
 /* ===== FOOTER ===== */
 footer{
+  background:#ffffff;
+  padding:30px;
   text-align:center;
-  padding:36px;
   font-size:13px;
   color:#666;
-}
-
-@media(max-width:900px){
-  .hero{grid-template-columns:1fr}
-  .brand-name{font-size:42px}
 }
 </style>
 </head>
 
 <body>
 
-<header class="brand-header">
-  <div class="brand-name">MITHILA CRUNCH</div>
-  <div class="brand-underline"></div>
-  <div class="brand-tagline">Har Bite Mein Mithila</div>
+<header>
+  <div class="brand">Mithila Crunch</div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#products">Products</a>
+    <a href="#">Contact</a>
+  </nav>
 </header>
 
 <section class="hero">
   <div>
     <h1>Authentic Mithila Sweets</h1>
-    <p>Traditional homemade sweets prepared with authentic Mithila recipes.</p>
+    <p>
+      Traditional homemade sweets crafted with authentic recipes from Mithila,
+      ensuring taste, hygiene and heritage in every bite.
+    </p>
+    <a class="btn" href="https://wa.me/91XXXXXXXXXX">Order on WhatsApp</a>
   </div>
-  <img src="thekua.jpg">
-</section>
-
-<section class="products">
-
-  <div class="card">
-    <img src="thekua.jpg">
-    <h3>Thekua</h3>
-    <div class="price">₹199</div>
-    <button class="btn" onclick="addToCart('Thekua',199)">Add to Cart</button>
-  </div>
-
-  <div class="card">
-    <img src="laddu.jpg">
-    <h3>Besan Laddu</h3>
-    <div class="price">₹249</div>
-    <button class="btn" onclick="addToCart('Besan Laddu',249)">Add to Cart</button>
-  </div>
-
-  <div class="card">
-    <img src="halwa.jpg">
-    <h3>Badam Halwa</h3>
-    <div class="price">₹299</div>
-    <button class="btn" onclick="addToCart('Badam Halwa',299)">Add to Cart</button>
-  </div>
-
-  <div class="card">
-    <img src="malpua.jpg">
-    <h3>Malpua with Rabri</h3>
-    <div class="price">₹299</div>
-    <button class="btn" onclick="addToCart('Malpua with Rabri',299)">Add to Cart</button>
-  </div>
-
-</section>
-
-<section class="cart">
-  <h2>Your Cart</h2>
-  <ul id="cartItems"></ul>
-  <div class="total" id="totalPrice">Total: ₹0</div>
-  <a id="whatsappOrder" class="btn" target="_blank">Order via WhatsApp</a>
+  <img src="thekua.jpg" style="width:100%;border-radius:18px">
 </section>
 
 <section class="trust">
-  <div>Authentic Recipe</div>
+  <div>Authentic Recipes</div>
   <div>Hygienic Preparation</div>
-  <div>All India Delivery</div>
+  <div>Pan India Delivery</div>
+</section>
+
+<section class="products" id="products">
+  <h2>Our Products</h2>
+
+  <div class="grid">
+    <div class="card">
+      <img src="thekua.jpg">
+      <h3>Thekua</h3>
+      <div class="price">₹199</div>
+    </div>
+
+    <div class="card">
+      <img src="laddu.jpg">
+      <h3>Besan Laddu</h3>
+      <div class="price">₹249</div>
+    </div>
+
+    <div class="card">
+      <img src="halwa.jpg">
+      <h3>Badam Halwa</h3>
+      <div class="price">₹299</div>
+    </div>
+
+    <div class="card">
+      <img src="malpua.jpg">
+      <h3>Malpua with Rabri</h3>
+      <div class="price">₹299</div>
+    </div>
+  </div>
 </section>
 
 <footer>
   © 2025 Mithila Crunch
 </footer>
 
-<script>
-let cart=[];
-function addToCart(name,price){
-  cart.push({name,price});
-  renderCart();
-}
-function renderCart(){
-  let list=document.getElementById('cartItems');
-  let total=0;
-  list.innerHTML='';
-  cart.forEach(item=>{
-    total+=item.price;
-    let li=document.createElement('li');
-    li.innerHTML=`${item.name} <span>₹${item.price}</span>`;
-    list.appendChild(li);
-  });
-  document.getElementById('totalPrice').innerText='Total: ₹'+total;
-  let msg='Order from Mithila Crunch:%0A';
-  cart.forEach(i=>msg+=`${i.name} - ₹${i.price}%0A`);
-  msg+=`Total: ₹${total}`;
-  document.getElementById('whatsappOrder').href=
-    'https://wa.me/91XXXXXXXXXX?text='+msg;
-}
-</script>
-
 </body>
 </html>
-
